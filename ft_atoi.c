@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:47:18 by esalah-e          #+#    #+#             */
 /*   Updated: 2026/10/26 08:56:49 by esalah-e         ###   ########.fr       */

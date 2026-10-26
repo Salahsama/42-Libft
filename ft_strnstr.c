@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 15:01:38 by esalah-e          #+#    #+#             */
 /*   Updated: 2026/10/17 12:45:08 by esalah-e         ###   ########.fr       */

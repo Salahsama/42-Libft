@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 15:37:53 by esalah-e          #+#    #+#             */
 /*   Updated: 2026/10/16 16:35:07 by esalah-e         ###   ########.fr       */

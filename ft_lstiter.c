@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 10:56:08 by esalah-e          #+#    #+#             */
 /*   Updated: 2026/10/24 11:07:21 by esalah-e         ###   ########.fr       */

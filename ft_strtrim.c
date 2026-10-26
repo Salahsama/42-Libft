@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 14:32:25 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/19 10:55:31 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 09:35:26 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*ft_malloc(char const *s1, size_t start, size_t end)
 	char	*p;
 
 	i = 0;
-	p = malloc((end - start) + 1);
+	p = malloc((end - start) + 2);
 	if (p != NULL)
 	{
 		while (i < (end - start + 1))

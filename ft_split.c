@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 10:56:51 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/21 09:18:29 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 09:45:17 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,14 @@ static char	*ft_malloc(char const *s, size_t index, char c)
 
 static char	**ft_free(char **p, size_t nb)
 {
-	while (nb >= 0)
-		free(p[--nb]);
+	size_t	i;
+
+	i = 0;
+	while (i < nb)
+	{
+		free(p[i]);
+		i++;
+	}
 	free(p);
 	return (NULL);
 }

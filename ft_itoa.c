@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 20:55:22 by esalah-e          #+#    #+#             */
 /*   Updated: 2026/10/20 09:17:22 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_numlen(long n)
+static int	ft_numlen(long n)
 {
 	long	nb;
 	int		counter;
@@ -30,7 +30,7 @@ int	ft_numlen(long n)
 	return (++counter);
 }
 
-char	*ft_fill(char *p, long nb, int len, int sign)
+static char	*ft_fill(char *p, long nb, int len, int sign)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ char	*ft_itoa(int n)
 			nb = -nb;
 			p[0] = '-';
 		}
-		return (ft_fill(p, nb, len, (p[0] == '-')));
+		return (ft_fill(p, nb, len, (n < 0)));
 	}
 	return (NULL);
 }
