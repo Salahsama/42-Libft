@@ -6,13 +6,13 @@
 /*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 14:13:45 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/22 14:15:36 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 08:58:40 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(!lst)
+	if (!lst)
 		return (NULL);
 	while (lst->next)
 		lst = lst->next;

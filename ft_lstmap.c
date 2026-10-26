@@ -6,7 +6,7 @@
 /*   By: esalah-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 11:22:12 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/24 21:36:17 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 09:01:37 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		{
 			del(new_content);
 			ft_lstclear(&new_list, del);
-			return NULL;
+			return (NULL);
 		}
 		ft_lstadd_back(&new_list, node);
 		lst = lst->next;
