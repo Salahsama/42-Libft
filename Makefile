@@ -10,7 +10,7 @@ ${NAME} : ${OBJS}
 	ar rcs ${NAME} $<
 
 ${OBJS} : ${SRCS}
-	${CC} ${FLAGS} -c $< -o $@
+	${CC} ${FLAGS} -c ${OBJS} -o $@
 
 re : fclean all
 
