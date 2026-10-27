@@ -6,12 +6,16 @@
 /*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 14:07:01 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/20 14:18:35 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 10:57:20 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);

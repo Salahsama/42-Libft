@@ -6,9 +6,11 @@
 /*   By: esalah-e <esalah-e@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 14:32:25 by esalah-e          #+#    #+#             */
-/*   Updated: 2026/10/26 09:35:26 by esalah-e         ###   ########.fr       */
+/*   Updated: 2026/10/26 10:56:01 by esalah-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	ft_check(char const *s1, char const *set, size_t indx, int fl)
 {
@@ -55,6 +57,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*p;
 
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1);
 	start = ft_check(s1, set, 0, 1);
 	if (start != len)
