@@ -32,21 +32,6 @@ static int	ft_numlen(long n)
 	return (++counter);
 }
 
-static char	*ft_fill(char *p, long nb, int len, int sign)
-{
-	int	i;
-
-	i = sign;
-	while (i < len)
-	{
-		p[len - i - !sign] = (nb % 10) + '0';
-		nb = nb / 10;
-		i++;
-	}
-	p[len] = '\0';
-	return (p);
-}
-
 char	*ft_itoa(int n)
 {
 	char	*p;
@@ -56,14 +41,18 @@ char	*ft_itoa(int n)
 	nb = n;
 	len = ft_numlen(nb);
 	p = (char *)malloc(len + 1);
-	if (p != NULL)
+	if (!p)
+		return (NULL);
+	if (nb < 0)
 	{
-		if (nb < 0)
-		{
-			nb = -nb;
-			p[0] = '-';
-		}
-		return (ft_fill(p, nb, len, (n < 0)));
+		nb = -nb;
+		p[0] = '-';
 	}
-	return (NULL);
+	p[len] = '\0';
+	while ((n < 0) <= --len)
+	{
+		p[len] = (nb % 10) + '0';
+		nb = nb / 10;
+	}
+	return (p);
 }
