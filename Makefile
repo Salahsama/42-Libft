@@ -1,4 +1,4 @@
-CC = cc
+CC = clang
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_lstadd_back.c \
@@ -11,7 +11,7 @@ OBJS = $(SRCS:.c=.o)
 all : ${NAME}
 
 ${NAME} : ${OBJS}
-	ar rcs ${NAME} $<
+	ar rcs ${NAME} $^
 
 %.o : %.c libft.h
 	${CC} ${FLAGS} -c $< -o $@
@@ -19,9 +19,9 @@ ${NAME} : ${OBJS}
 re : fclean all
 
 fclean : clean
-	rm -rf ${NAME}
+	rm -f ${NAME}
 
 clean :
-	rm -rf ${OBJS}
+	rm -f ${OBJS}
 
 .PHONY: all re clean fclean

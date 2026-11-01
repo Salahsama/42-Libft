@@ -14,29 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	x;
-	char			*pnt;
-	int				found;
+	char	*last;
 
-	x = (unsigned char)c;
-	pnt = (char *)s;
-	found = 0;
+	last = NULL;
 	while (*s)
 	{
-		if (x == (unsigned char)*s)
-		{
-			pnt = (char *)s;
-			found = 1;
-		}
+		if (*s == (char)c)
+			last = (char *)s;
 		s++;
 	}
-	if (x == '\0')
-	{
-		found = 1;
-		pnt = (char *)s;
-	}
-	if (found == 0)
-		return (NULL);
-	else
-		return (pnt);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return ((char *)last);
 }

@@ -12,65 +12,29 @@
 
 #include "libft.h"
 
-static size_t	ft_check(char const *s1, char const *set, size_t indx, int fl)
+static int	ft_char_in_set(char c, char const *set)
 {
-	int	len;
-	int	i;
-
-	len = (int)ft_strlen(set);
-	i = 0;
-	while (i < len)
+	while (*set)
 	{
-		if (s1[indx] == set[i])
-		{
-			indx = indx + fl;
-			return (ft_check(s1, set, indx, fl));
-		}
-		i++;
+		if (c == *set)
+			return (1);
+		set++;
 	}
-	return (indx);
-}
-
-static char	*ft_malloc(char const *s1, size_t start, size_t end)
-{
-	size_t	i;
-	char	*p;
-
-	i = 0;
-	p = malloc((end - start) + 2);
-	if (p != NULL)
-	{
-		while (i < (end - start + 1))
-		{
-			p[i] = s1[start + i];
-			i++;
-		}
-		p[i] = '\0';
-	}
-	return (p);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
 	size_t	start;
 	size_t	end;
-	char	*p;
 
 	if (!s1 || !set)
 		return (NULL);
-	len = ft_strlen(s1);
-	start = ft_check(s1, set, 0, 1);
-	if (start != len)
-	{
-		end = ft_check(s1, set, (len - 1), -1);
-		return (ft_malloc(s1, start, end));
-	}
-	else
-	{
-		p = (char *)malloc(1);
-		if (p != NULL)
-			p[0] = '\0';
-		return (p);
-	}
+	start = 0;
+	while (s1[start] && ft_char_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_char_in_set(s1[end - 1], set))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }
